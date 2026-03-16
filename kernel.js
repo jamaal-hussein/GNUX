@@ -11,13 +11,11 @@ function runCommand(cmd){
 
 cmd = cmd.trim()
 
-if(cmd === ""){
-return
-}
+if(cmd === "") return
 
 if(cmd === "help"){
 print("Commands:")
-print("help echo clear date whoami uname version neofetch")
+print("help echo clear date whoami uname version neofetch fastfetch ls cd")
 }
 
 else if(cmd.startsWith("echo ")){
@@ -44,7 +42,15 @@ else if(cmd === "version"){
 print("GNUX 0.1")
 }
 
-else if(cmd === "neofetch"){
+else if(cmd === "ls"){
+print("home bin etc readme.txt cheese.txt")
+}
+
+else if(cmd === "cd"){
+print("filesystem not implemented yet")
+}
+
+else if(cmd === "neofetch" || cmd === "fastfetch"){
 
 print(`
       _____
@@ -60,6 +66,7 @@ Shell: gnux-sh
 Host: Browser
 Terminal: HTMLTTY
 User: ${user}
+Packages: 8
 `)
 
 }
