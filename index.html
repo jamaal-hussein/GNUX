@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <title>GNUX</title>
 
 <style>
 
 body{
   background:black;
-  color:#00ff00;
+  color:white;
   font-family:monospace;
   margin:0;
   padding:10px;
@@ -17,25 +18,35 @@ body{
   white-space:pre-wrap;
 }
 
+#inputline{
+  display:flex;
+}
+
+#prompt{
+  margin-right:5px;
+}
+
 input{
   background:black;
-  color:#00ff00;
+  color:white;
   border:none;
   outline:none;
   font-family:monospace;
-  width:100%;
+  flex:1;
 }
 
 </style>
+
 </head>
 
 <body>
 
-<div id="terminal">
-GNUX booting...
-</div>
+<div id="terminal">GNUX booting...</div>
 
+<div id="inputline">
+<span id="prompt">></span>
 <input id="input" autofocus>
+</div>
 
 <script src="kernel.js"></script>
 
