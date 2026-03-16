@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>GNUX Desktop</title>
+
+<style>
+
+body{
+margin:0;
+background:#222;
+color:white;
+font-family:sans-serif;
+}
+
+#bar{
+background:#111;
+padding:5px;
+}
+
+#desktop{
+height:calc(100vh - 30px);
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+button{
+background:#333;
+color:white;
+border:none;
+padding:10px;
+margin:5px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="bar">
+GNUX Desktop
+<button onclick="openTerminal()">Terminal</button>
+<button onclick="logoff()">Logoff</button>
+</div>
+
+<div id="desktop">
+Minimal Desktop Environment
+</div>
+
+<script>
+
+function openTerminal(){
+let cmd = prompt("terminal>")
+
+if(cmd==="logoff"){
+window.location.href="index.html"
+}else{
+alert("command not found")
+}
+}
+
+function logoff(){
+window.location.href="index.html"
+}
+
+</script>
+
+</body>
+</html>
